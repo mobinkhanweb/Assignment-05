@@ -1,4 +1,4 @@
-// console.log("added js file")
+
 
 const historyContainer = document.getElementById("history-container");
 const allCard = document.querySelectorAll(".common-cart");
