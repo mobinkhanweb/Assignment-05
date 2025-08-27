@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Service Directory</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"/>
+
 </head>
 <body>
-    
+    <!-- start of nav bar -->
+    <nav class="py-2 bg-white shadow px-2">
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="flex gap-2 items-center">
+          <figure>
+            <img src="./assets/logo.png" alt="" class="w-12" />
+          </figure>
+          <h1 class="font-bold text-xl text-green-700">
+            Emergency <br />
+            Service
+          </h1>
+        </div>
+
+
+        <div class="flex gap-4">
+          <div
+            class="flex items-center gap-2 text-xl bg-green-100/80 py-1 px-2 rounded-full"
+          >
+            <h1 id="love-count" class="text-2xl">0</h1>
+            <figure>
+              <img src="./assets/heart.png" alt="" class="w-7" />
+            </figure>
+          </div>
+          <div
+            class="flex items-center gap-2 text-xl bg-green-100/80 py-1 px-2 rounded-full"
+          >
+            <h1 id="cradit" class="text-2xl">100</h1>
+            <img src="./assets/coin.png" alt="" class="w-7" />
+          </div>
+          <div
+            class="flex items-center gap-2 text-xl bg-green-600 py-1 px-4 rounded-full"
+          >
+            <h1 class="text-white" id="copy-count">0</h1>
+            <p class="text-sm text-white">Copy</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+
 </body>
 </html>
