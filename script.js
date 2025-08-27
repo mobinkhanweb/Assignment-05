@@ -1,3 +1,5 @@
+// console.log("added js file")
+
 const historyContainer = document.getElementById("history-container");
 const allCard = document.querySelectorAll(".common-cart");
 let copyUpdate = document.getElementById("copy-count");
@@ -7,6 +9,7 @@ const clearHitory = document.getElementById("clear-hitory");
 let noHistory = document.getElementById("no-histry");
 let copyCount = 0;
 let loveCount = 0;
+
 
 [...allCard].forEach((card) => {
   card.addEventListener("click", function (e) {
@@ -24,6 +27,7 @@ let loveCount = 0;
       const title = card.querySelector(".title").textContent;
       const number = card.querySelector(".phone-number").textContent;
 
+
       const callCost = 20;
       let currentCradit = Number(cradit.textContent);
       if (currentCradit < 20) {
@@ -39,20 +43,24 @@ let loveCount = 0;
   });
 });
 
+
 clearHitory.addEventListener("click", function () {
   historyContainer.innerHTML = "";
   noHistory.textContent = "No history";
   historyContainer.appendChild(noHistory);
 });
 
+
 // find class
 function getClass(e, text) {
   return e.target.classList.contains(text);
 }
 
+
 // create history
 function historyCreate(title, number, time) {
   const div = document.createElement("div");
+
 
   div.innerHTML = `
     <div
@@ -66,8 +74,10 @@ function historyCreate(title, number, time) {
               </div>
     `;
 
+
   historyContainer.appendChild(div);
 }
+
 
 // get time
 function getTime() {
@@ -76,9 +86,12 @@ function getTime() {
   let hour12 = h % 12;
   hour12 = hour12 === 0 ? 12 : hour12;
 
+
   let hh = hour12.toString().padStart(2, "0");
   let m = date.getMinutes().toString().padStart(2, "0");
   let s = date.getSeconds().toString().padStart(2, "0");
 
+
   return `${hh}:${m}:${s}`;
 }
+
